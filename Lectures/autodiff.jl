@@ -888,7 +888,7 @@ we have a complexity of
 
 # ╔═╡ 9afd31c9-e938-417a-8c3f-e0d1ba88f95b
 qa(md"Which mode should be used depending on the ``d_i`` ?", md"""
-We see that we should find the minimum ``d_k`` and start from there. If the minimum is attained at ``k = n``, this corresponds mutliplying from left to right, this is reverse differentiation. If the minimum is attained at ``k = 0``, we should multiply from right to left, this is forward mode. Otherwise, we should start from the middle, this would mean mixing both forward and reverse mode.
+We see that we should find the minimum ``d_k`` and start from there. If the minimum is attained at ``k = n``, this corresponds multiplying from left to right, this is reverse differentiation. If the minimum is attained at ``k = 0``, we should multiply from right to left, this is forward mode. Otherwise, we should start from the middle, this would mean mixing both forward and reverse mode.
 """)
 
 # ╔═╡ f010e781-f41e-4861-af1c-32cf5a76ce4d
