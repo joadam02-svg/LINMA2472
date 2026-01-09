@@ -757,7 +757,7 @@ qa(md"When is each mode faster than the other one to compute the full Jacobian ?
 * if ``m \approx n``, then it's a close call.")
 
 # ╔═╡ ac52550e-3287-427f-b957-ac61bc850f4d
-qa(md"When is the speed of numerical differentation comparable to autodiff ?",
+qa(md"When is the speed of numerical differentiation comparable to autodiff ?",
 md"""
 With numerical differentiation, we compute a JVP with ``\partial f / \partial x_i \approx (f(x_1, \ldots, x_{i - 1}, x_i + \epsilon, x_{i + 1}, x_n) - f(x_1, \ldots, x_n)) / \epsilon``.
 For this JVP, we need to evaluate ``f`` twice. On the other hand, forward mode evaluates ``f`` once but with dual numbers as inputs so this evaluation is probably around twice as expensive as evaluating ``f`` with `Float64` numbers. So the cost of a JVP should be roughly the same for numerical differentiation and forward differentiation.
@@ -831,7 +831,7 @@ The adjoint trick gives
 =
 \langle \partial w, J_1^\top J_2^\top \cdots J_{n-1}^\top J_n^\top \partial y \rangle.
 ```
-So reverse differentation corresponds to multiplying the adjoint from right to left or equivalently the original matrices from left to right.
+So reverse differentiation corresponds to multiplying the adjoint from right to left or equivalently the original matrices from left to right.
 This means computing the product in the following order:
 ```math
 \begin{align}
